@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="column">
+                <h2>{{ _('Source Currency')}}</h2>
+                <select id="source-currency">
+                </select>
+                <input type="number" id="source-amount" placeholder="{{ _('Amount')}}" min="0" step="0.5"/>
+            </div>
+            <div class="column">
+                <h2>{{ _('Target Currency')}}</h2>
+                <select id="target-currency">
+                </select>
+                <input type="number" id="target-amount" placeholder="{{ _('Amount')}}" readonly/>
+            </div>
+        </div>
+    </div>
+    <script src="{{ static_url('js/convert.js') }}'""></script>
+{% end %}
